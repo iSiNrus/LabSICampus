@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_l"
+    android:layout_gravity="top|end"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/new_task_contents"
+        style="@style/TextView.NavigationDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_l"
+        android:autofillHints="name"
+        android:background="@android:color/transparent"
+        android:drawablePadding="@dimen/icon_padding"
+        android:gravity="center_vertical|start"
+        android:hint="@string/new_task"
+        android:imeOptions="actionDone"
+        android:inputType="textAutoComplete"
+        android:text="@string/new_task"
+        app:drawableLeftCompat="@drawable/add" />
+
+</LinearLayout>
