@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.List;
+import java.util.Objects;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -36,8 +37,9 @@ public class RealmManager {
     }
 
     public long getNumberOfTasks() {
-        // todo implement
-        throw new NotImplementedError();
+        List<Task> res = getData();
+        if(res == null) return 0;
+        else return res.size();
     }
 
     public void deleteTask(int Task_id) {
@@ -46,8 +48,7 @@ public class RealmManager {
             @Override
             public void execute(@NonNull Realm realm) {
                 if (model != null) {
-                    // todo implement
-                    throw new NotImplementedError();
+                    model.deleteFromRealm();
                 }
             }
         });

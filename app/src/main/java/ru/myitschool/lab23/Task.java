@@ -14,8 +14,7 @@ public class Task extends RealmObject {
     }
 
     public Task(@NonNull String taskContents) {
-        // todo implement
-        throw new NotImplementedError();
+        this.taskContents = taskContents;
     }
 
     public int getTaskId() {

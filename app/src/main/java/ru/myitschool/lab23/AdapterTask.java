@@ -1,5 +1,6 @@
 package ru.myitschool.lab23;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -25,8 +26,8 @@ public class AdapterTask extends RealmRecyclerViewAdapter<Task, AdapterTask.Task
     @NonNull
     @Override
     public TaskViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // todo implement
-        throw new NotImplementedError();
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.task_row, parent, false);
+        return new TaskViewHolder(view);
     }
 
     @Override
